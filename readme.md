@@ -6,9 +6,16 @@
 
     sudo apt-get install libsdl2-dev
 
-Additional support libs:
+For image loaders:
 
     libsdl2-image-dev
+
+For OpenGL:
+
+    libglew-dev
+
+Additional useful libs not covered by examples:
+
     libsdl2-ttf-dev
     libsdl2-mixer-dev
 
