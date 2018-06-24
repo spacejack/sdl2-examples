@@ -1,0 +1,7 @@
+*.log
+/**/.vscode/c_cpp_properties.json
+# Compiled executables
+/helloSDL/helloSDL
+/helloSDL/helloSDL.exe
+/helloImg/helloImg
+/helloImg/helloImg.exe
