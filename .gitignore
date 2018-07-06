@@ -6,6 +6,7 @@
 /helloGL/helloGL
 /oglwrapTest/square/square
 /oglwrapTest/cube/cube
+/oglwrapTest/cylinder/cylinder
 /**/deps/*
 !/**/deps/readme.md
 *.exe
