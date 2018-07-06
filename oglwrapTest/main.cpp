@@ -1,5 +1,4 @@
 #include <string>
-#include <iostream>
 #include <GL/glew.h>
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_opengl.h>
@@ -150,5 +149,6 @@ int main (int argc, char* args[]) {
 	initShader(program);
 	printf("Initialized shader\n");
 	mainLoop();
+	cleanupSDL();
 	printf("Quitting\n");
 }
