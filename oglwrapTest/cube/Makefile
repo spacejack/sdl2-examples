@@ -7,13 +7,13 @@ CC = g++
 #COMPILER_FLAGS specifies the additional compilation options we're using
 # -w suppresses all warnings
 #COMPILER_FLAGS = -w
-COMPILER_FLAGS = -Ideps
+COMPILER_FLAGS = -I../deps
 
 #LINKER_FLAGS specifies the libraries we're linking against
 LINKER_FLAGS = -lSDL2 -lGL -lGLEW
 
 #OBJ_NAME specifies the name of our exectuable
-OBJ_NAME = oglwrapTest
+OBJ_NAME = cube
 
 #This is the target that compiles our executable
 all : $(OBJS)

@@ -64,7 +64,7 @@ void cleanupSDL() {
 	SDL_Quit();
 }
 
-void initShader (gl::Program& program) {
+void initProgram (gl::Program& program) {
 	// Create a vertex shader
 	gl::ShaderSource vs_source;
 	vs_source.set_source(R"""(
@@ -99,12 +99,10 @@ void initShader (gl::Program& program) {
 	// Bind the attribute position to the location that the RectangleShape uses
 	// (Both use attribute 0 by default for position, so this call isn't necessary)
 	(program | "pos").bindLocation(gl::RectangleShape::kPosition);
-
-	// Set the clear color to grey
-	gl::ClearColor(0.2f, 0.2f, 0.2f, 1.0f);
 }
 
 void render (gl::RectangleShape& rectangle) {
+	gl::Clear().Color().Depth();
 	rectangle.render();
 }
 
@@ -146,8 +144,11 @@ int main (int argc, char* args[]) {
 	}
 	printf("Initialized SDL\n");
 	gl::Program program;
-	initShader(program);
+	initProgram(program);
 	printf("Initialized shader\n");
+	// Set the clear color
+	gl::ClearColor(0.2f, 0.2f, 0.2f, 1.0f);
+	// Run the main loop until quit event
 	mainLoop();
 	cleanupSDL();
 	printf("Quitting\n");
