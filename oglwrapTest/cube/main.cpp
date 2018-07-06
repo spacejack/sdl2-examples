@@ -7,7 +7,7 @@
 #include <oglwrap/shapes/cube_shape.h>
 
 SDL_Window* window = NULL;
-SDL_GLContext context;
+SDL_GLContext context = NULL;
 
 const int SCREEN_WIDTH = 600;
 const int SCREEN_HEIGHT = 600;
