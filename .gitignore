@@ -4,4 +4,7 @@
 /helloSDL/helloSDL
 /helloImg/helloImg
 /helloGL/helloGL
+/oglwrapTest/oglwrapTest
+/**/deps/*
+!/**/deps/readme.md
 *.exe
